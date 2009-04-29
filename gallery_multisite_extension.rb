@@ -5,7 +5,8 @@ class GalleryMultisiteExtension < Radiant::Extension
 
   def activate
     Gallery.send :is_site_scoped
-    #admin.text_asset.index.add :top, "admin/shared/site_jumper"
+
+    GalleryImportingsController.send :include, GalleryMultisite::GalleryImportingsControllerExtensions
   end
   
 end
