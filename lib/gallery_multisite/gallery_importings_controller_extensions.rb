@@ -7,7 +7,7 @@ module GalleryMultisite::GalleryImportingsControllerExtensions
 
   def import_path_with_site
     if @current_site.base_domain.blank?
-       import_path
+       import_path_without_site
     else
       File.join(galleries_absolute_path, 'import', @current_site.base_domain)
     end
