@@ -7,3 +7,9 @@ Dependencies
 ------------
 * [Gallery Extension](http://github.com/pilu/radiant-gallery/tree/master) 
 * [Multisite Extension](http://github.com/spanner/radiant-multi-site-extension/tree/master) (Spanners fork)
+
+Installation
+------------
+In environment.rb you’ll need to add ':gallery_observer' to observers.
+
+config.active_record.observers = [:user_action_observer, :gallery_observer]
