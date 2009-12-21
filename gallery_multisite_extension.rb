@@ -4,7 +4,6 @@ class GalleryMultisiteExtension < Radiant::Extension
   url "http//github.com/netzpirat/radiant-gallery-multisite-extension"
 
   def activate
-    GalleryObserver.send :include, MultiSite::ActionObserverExtensions
     Gallery.send :is_site_scoped
     GalleryImportingsController.send :include, GalleryMultisite::GalleryImportingsControllerExtensions
   end
